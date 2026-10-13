@@ -1,0 +1,425 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Canva 커뮤니티 한·일 교류연수 / 日韓交流研修</title>
+<meta name="description" content="한국과 일본의 Canva 커뮤니티가 Canva로 만나는 온라인 교류연수. 韓国と日本の Canva コミュニティが Canva で出会うオンライン交流研修。">
+<meta property="og:title" content="Canva 커뮤니티 한·일 교류연수 / 日韓交流研修">
+<meta property="og:description" content="2026년 10월 말 19:00–20:00 (KST/JST) · 온라인 · 한국어·일본어 자막·통역 지원">
+<style>html,body{margin:0}body{font-size:14px}img{max-width:100%}[hidden]{display:none!important}</style>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;800&family=Noto+Sans+JP:wght@400;500;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap">
+<style>
+/* Layout: one brand strip, split hero (title | event facts), then ruled sections — program table, A/B tool comparison, step guides, checklist */
+:root{
+  --bg:#ffffff;
+  --surface:#f6f5fb;
+  --ink:#14122b;
+  --ink-2:#5b5872;
+  --line:#e6e4ef;
+  --accent:#7d2ae8;
+  --accent-ink:#ffffff;
+  --accent-wash:#f2ebfe;
+  --teal:#00a3ad;
+  --neg:#d23f69;
+  --brand:linear-gradient(90deg,#00c4cc 0%,#5a32fa 50%,#7d2ae8 100%);
+  --f-ko:"Noto Sans KR","Apple SD Gothic Neo","Malgun Gothic",sans-serif;
+  --f-ja:"Noto Sans JP","Hiragino Sans","Yu Gothic",sans-serif;
+  --f-num:"Plus Jakarta Sans","Noto Sans KR",sans-serif;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#0f0e17;--surface:#18162a;--ink:#f2f0fa;--ink-2:#a7a3bd;--line:#2a2740;
+  --accent:#a77bff;--accent-ink:#120d24;--accent-wash:#231c3d;--teal:#36d6de;--neg:#ff7a9c;color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0f0e17;--surface:#18162a;--ink:#f2f0fa;--ink-2:#a7a3bd;--line:#2a2740;
+  --accent:#a77bff;--accent-ink:#120d24;--accent-wash:#231c3d;--teal:#36d6de;--neg:#ff7a9c;color-scheme:dark}
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--ink);font-family:var(--f-ko);font-size:16px;line-height:1.7;padding-inline:16px;padding-block:0 64px;-webkit-font-smoothing:antialiased}
+[lang="ja"]{font-family:var(--f-ja)}
+body{word-break:keep-all;overflow-wrap:break-word;line-break:strict}
+[lang="ja"]{word-break:normal;word-break:auto-phrase}
+p,li,dd{text-wrap:pretty}
+h1,h2,h3,b{text-wrap:balance}
+a{color:var(--accent)}
+a:focus-visible,button:focus-visible,input:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:6px}
+.wrap{max-width:1080px;margin:0 auto}
+body.only-ko main [lang="ja"],body.only-ja main [lang="ko"]{display:none}
+
+/* brand strip + header */
+.strip{height:4px;margin-inline:-16px;background:var(--brand)}
+.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:10;margin-inline:-16px;padding:12px 16px;background:color-mix(in srgb,var(--bg) 90%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.top .wrap{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
+.mark{display:flex;align-items:center;gap:10px;font-family:var(--f-num);font-weight:800;font-size:15px;letter-spacing:-.01em}
+.mark i{width:22px;height:22px;border-radius:7px;background:var(--brand)}
+.seg{display:inline-flex;border:1px solid var(--line);border-radius:10px;padding:3px;background:var(--bg)}
+.seg button{all:unset;cursor:pointer;font-size:13px;font-weight:500;padding:5px 12px;border-radius:7px;color:var(--ink-2)}
+.seg button[aria-pressed="true"]{background:var(--ink);color:var(--bg)}
+
+/* hero */
+.hero{display:grid;grid-template-columns:1.35fr 1fr;gap:56px;align-items:end;padding-block:72px 64px;border-bottom:1px solid var(--line)}
+.hero>*{min-width:0}
+.label{display:inline-flex;align-items:center;gap:8px;font-size:13px;font-weight:700;color:var(--accent);background:var(--accent-wash);padding:5px 12px;border-radius:999px}
+.hero h1{margin:20px 0 0;line-height:1.12;letter-spacing:-.02em}
+.hero h1 .ko{display:block;font-weight:800;font-size:clamp(40px,6.4vw,72px)}
+.hero h1 .ja{display:block;font-weight:500;font-size:clamp(22px,3.2vw,34px);color:var(--ink-2);margin-top:10px;letter-spacing:0}
+body.only-ja .hero h1 .ja{font-weight:700;font-size:clamp(36px,5.6vw,62px);color:var(--ink)}
+.lede{margin-top:24px;display:grid;gap:6px;max-width:34em;color:var(--ink-2);font-size:16.5px}
+.lede p{margin:0}
+.actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:28px}
+.btn{display:inline-flex;align-items:center;gap:8px;text-decoration:none;font-weight:700;font-size:14.5px;padding:12px 20px;border-radius:10px;border:1px solid var(--line);color:var(--ink);background:var(--bg)}
+.btn.solid{background:var(--accent);border-color:var(--accent);color:var(--accent-ink)}
+@media (prefers-reduced-motion:no-preference){.btn,.install{transition:transform .15s,box-shadow .15s}.btn:hover,.install:hover{transform:translateY(-1px)}}
+
+.facts{margin:0;background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:8px 24px}
+.facts>div{display:grid;grid-template-columns:72px 1fr;gap:16px;padding:18px 0}
+.facts>div+div{border-top:1px solid var(--line)}
+.facts dt{font-size:13px;font-weight:700;color:var(--ink-2);padding-top:5px}
+.facts dt span{display:block;line-height:1.4}
+.facts dd{margin:0;min-width:0}
+.facts .v{font-family:var(--f-num);font-weight:800;font-size:24px;letter-spacing:-.01em;line-height:1.3;font-variant-numeric:tabular-nums;white-space:nowrap}
+.facts .v span{font-family:inherit}
+.facts .n{font-size:13.5px;color:var(--ink-2);line-height:1.5;margin-top:2px}
+.facts .n span{display:block}
+@media (max-width:860px){.hero{grid-template-columns:1fr;gap:36px;padding-block:48px}}
+
+/* section scaffold */
+section{padding-block:64px;border-bottom:1px solid var(--line)}
+.sh{display:flex;align-items:baseline;gap:6px 16px;flex-wrap:wrap;margin-bottom:28px}
+.sh h2{margin:0;font-size:clamp(24px,3vw,30px);font-weight:800;letter-spacing:-.015em;line-height:1.3}
+.sh .ja{font-size:16px;font-weight:500;color:var(--ink-2)}
+body.only-ja .sh .ja{font-size:clamp(24px,3vw,30px);font-weight:700;color:var(--ink)}
+.sh p{flex-basis:100%;margin:0;color:var(--ink-2);font-size:15px}
+
+/* program */
+.prog{border-top:2px solid var(--ink)}
+.row{display:grid;grid-template-columns:150px 1fr 1fr;gap:8px 32px;padding:20px 0;border-bottom:1px solid var(--line)}
+.row>*{min-width:0}
+body.only-ko .row,body.only-ja .row{grid-template-columns:150px 1fr}
+.time{font-family:var(--f-num);font-weight:700;font-size:15px;color:var(--accent);font-variant-numeric:tabular-nums;padding-top:1px}
+.row b{display:block;font-weight:700;font-size:16.5px;line-height:1.5}
+.row span.d{display:block;color:var(--ink-2);font-size:14px;line-height:1.55;margin-top:2px}
+@media (max-width:720px){.row,body.only-ko .row,body.only-ja .row{grid-template-columns:1fr;gap:6px}}
+
+/* tool comparison */
+.tools{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+@media (max-width:820px){.tools{grid-template-columns:1fr}}
+.tool{border:1px solid var(--line);border-radius:18px;padding:28px;display:flex;flex-direction:column;gap:20px;min-width:0;background:var(--bg)}
+.tool-h{display:flex;align-items:center;gap:14px}
+.chip{flex:none;width:40px;height:40px;border-radius:11px;display:grid;place-items:center;font-family:var(--f-num);font-weight:800;font-size:17px;background:var(--accent-wash);color:var(--accent)}
+.tool h3{margin:0;font-family:var(--f-num);font-size:22px;font-weight:800;letter-spacing:-.01em}
+.desc{display:grid;gap:4px;font-size:14.5px}
+.desc p{margin:0}
+.desc [lang="ja"]{color:var(--ink-2)}
+body.only-ja .desc [lang="ja"]{color:var(--ink)}
+.specs{margin:0;border-top:1px solid var(--line)}
+.specs>div{display:grid;grid-template-columns:96px 1fr;gap:12px;padding:10px 0;border-bottom:1px solid var(--line);font-size:14px}
+.specs dt{color:var(--ink-2);font-weight:500}
+.specs dd{margin:0;min-width:0}
+.pc{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+@media (max-width:520px){.pc{grid-template-columns:1fr}}
+.pc>div{min-width:0}
+.pc h4{margin:0 0 10px;font-size:13px;font-weight:700;color:var(--ink-2)}
+.pc ul{margin:0;padding:0;list-style:none;display:grid;gap:10px;font-size:14px;line-height:1.5}
+.pc li{display:grid;grid-template-columns:18px 1fr;gap:8px}
+.pc li::before{font-family:var(--f-num);font-weight:800;line-height:1.5}
+.pc .pros li::before{content:"+";color:var(--teal)}
+.pc .cons li::before{content:"−";color:var(--neg)}
+.pc li>span{min-width:0}
+.pc li [lang="ja"]{display:block;font-size:13px;color:var(--ink-2);margin-top:1px}
+body.only-ja .pc li [lang="ja"]{font-size:14px;color:var(--ink)}
+.tool .foot{margin-top:auto;display:grid;gap:10px}
+.more{font-size:14px;font-weight:700;text-decoration:none}
+.install{display:flex;align-items:center;gap:14px;text-decoration:none;background:var(--accent);color:var(--accent-ink);border-radius:12px;padding:14px 18px}
+.install .ico{flex:none;width:34px;height:34px;border-radius:9px;display:grid;place-items:center;background:color-mix(in srgb,var(--accent-ink) 18%,transparent);font-size:16px}
+.install .txt{flex:1;min-width:0}
+.install b{display:block;font-size:15px}
+.install small{display:block;font-family:var(--f-num);font-size:12px;opacity:.8;word-break:break-all}
+
+/* guides */
+.guide+.guide{margin-top:56px}
+.guide-h{display:flex;align-items:center;gap:14px;margin-bottom:8px}
+.guide-h h3{margin:0;font-size:20px;font-weight:800;letter-spacing:-.01em}
+.guide-h h3 .ja{font-weight:500;color:var(--ink-2);font-size:15px;margin-left:8px}
+body.only-ja .guide-h h3 .ja{font-size:20px;font-weight:700;color:var(--ink);margin-left:0}
+.guide-note{margin:0 0 20px;color:var(--ink-2);font-size:14.5px;display:grid;gap:2px}
+.guide-note span{display:block}
+.steps{list-style:none;margin:20px 0 0;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1px;background:var(--line);border:1px solid var(--line);border-radius:16px;overflow:hidden;counter-reset:s}
+.steps li{background:var(--bg);padding:22px;counter-increment:s;min-width:0}
+.steps li::before{content:counter(s,decimal-leading-zero);display:block;font-family:var(--f-num);font-weight:800;font-size:13px;color:var(--accent);margin-bottom:10px}
+.steps .ko,.steps .ja{display:block}
+.steps .ja{margin-top:12px;padding-top:12px;border-top:1px dashed var(--line)}
+body.only-ja .steps .ja{margin-top:0;padding-top:0;border-top:0}
+.steps b{display:block;font-size:15.5px;font-weight:700;line-height:1.5}
+.steps p{margin:4px 0 0;font-size:14px;color:var(--ink-2);line-height:1.6}
+.kbd{font-family:var(--f-num);font-size:.86em;font-weight:600;background:var(--surface);border:1px solid var(--line);color:var(--ink);padding:1px 6px;border-radius:5px;word-break:break-word}
+.note-box{margin-top:20px;border-radius:16px;padding:22px 24px;background:var(--surface);display:grid;grid-template-columns:1fr 1fr;gap:24px}
+body.only-ko .note-box,body.only-ja .note-box{grid-template-columns:1fr}
+@media (max-width:720px){.note-box{grid-template-columns:1fr}}
+.note-box>div{min-width:0}
+.note-box b{font-size:14.5px}
+.note-box ul{margin:8px 0 0;padding-left:18px;font-size:14px;color:var(--ink-2)}
+.note-box li+li{margin-top:4px}
+.ext{display:inline-block;margin-top:16px;font-size:14px;font-weight:700;text-decoration:none}
+
+
+/* apply */
+.apply-box{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:20px;border-radius:18px;padding:28px;background:var(--accent-wash)}
+.apply-box>div{flex:1 1 360px;min-width:0;display:grid;gap:6px}
+.apply-box b{font-size:17px}
+.apply-box p{margin:0;font-size:14.5px;color:var(--ink-2)}
+
+/* checklist */
+.check{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+@media (max-width:860px){.check{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:520px){.check{grid-template-columns:1fr}}
+.check label{display:flex;gap:12px;align-items:flex-start;border:1px solid var(--line);border-radius:12px;padding:14px 16px;cursor:pointer;min-width:0}
+.check input{appearance:none;flex:none;width:20px;height:20px;margin:3px 0 0;border-radius:6px;border:1.5px solid var(--ink-2);display:grid;place-items:center;cursor:pointer;background:var(--bg)}
+.check input::after{content:"";width:10px;height:6px;border-left:2px solid var(--accent-ink);border-bottom:2px solid var(--accent-ink);transform:rotate(-45deg) translate(1px,-1px);opacity:0}
+.check input:checked{background:var(--accent);border-color:var(--accent)}
+.check input:checked::after{opacity:1}
+.check label:has(input:checked){border-color:var(--accent);background:var(--accent-wash)}
+.check .t{min-width:0}
+.check .t span{display:block;font-size:14.5px;line-height:1.5}
+.check .t [lang="ja"]{font-size:13px;color:var(--ink-2);margin-top:2px}
+body.only-ja .check .t [lang="ja"]{font-size:14.5px;color:var(--ink);margin-top:0}
+.count{margin-top:16px;font-family:var(--f-num);font-weight:700;font-size:13px;color:var(--ink-2);font-variant-numeric:tabular-nums}
+
+footer{padding-top:28px;color:var(--ink-2);font-size:13.5px;display:grid;gap:2px}
+footer p{margin:0}
+</style>
+
+</head>
+<body>
+<div class="strip" aria-hidden="true"></div>
+<div class="top">
+  <div class="wrap">
+    <span class="mark"><i aria-hidden="true"></i>Canva Community</span>
+    <div class="seg" role="group" aria-label="표시 언어 / 表示言語">
+      <button type="button" id="lang-both" data-mode="both" aria-pressed="true">한·日</button>
+      <button type="button" id="lang-ko" data-mode="ko" aria-pressed="false">한국어</button>
+      <button type="button" id="lang-ja" data-mode="ja" aria-pressed="false">日本語</button>
+    </div>
+  </div>
+</div>
+
+<main class="wrap">
+  <header class="hero">
+    <div>
+      <span class="label"><span lang="ko">Canva 커뮤니티 · 한국 · 일본</span><span lang="ja">Canva コミュニティ・韓国・日本</span></span>
+      <h1><span class="ko" lang="ko">한·일 교류연수</span><span class="ja" lang="ja">日韓交流研修</span></h1>
+      <div class="lede">
+        <p lang="ko">한국과 일본의 Canva 커뮤니티가 Canva로 만나 사례를 나누고 함께 만듭니다. 자막·통역을 지원합니다.</p>
+        <p lang="ja">韓国と日本の Canva コミュニティが Canva で出会い、事例を共有し、一緒に作ります。字幕・通訳をサポートします。</p>
+      </div>
+      <div class="actions">
+        <a class="btn solid" href="https://canva-training-apply.vercel.app/exchange#apply"><span lang="ko">신청하기</span><span lang="ja"> 申し込む</span></a>
+        <a class="btn" href="#tools"><span lang="ko">통역 도구 보기</span><span lang="ja"> 通訳ツールを見る</span></a>
+              </div>
+    </div>
+
+    <dl class="facts">
+      <div>
+        <dt><span lang="ko">날짜</span><span lang="ja">日程</span></dt>
+        <dd><div class="v">2026.10</div><div class="n"><span lang="ko">10월 말, 정확한 날짜는 이메일로 안내</span><span lang="ja">10月下旬、正式な日程はメールでご案内</span></div></dd>
+      </div>
+      <div>
+        <dt><span lang="ko">시간</span><span lang="ja">時間</span></dt>
+        <dd><div class="v">19:00–20:00</div><div class="n"><span lang="ko">한국·일본 같은 시각</span><span lang="ja">韓国・日本とも同時刻</span></div></dd>
+      </div>
+      <div>
+        <dt><span lang="ko">장소</span><span lang="ja">場所</span></dt>
+        <dd><div class="v"><span lang="ko">온라인</span> <span lang="ja">オンライン</span></div><div class="n"><span lang="ko">접속 링크는 이메일로 안내</span><span lang="ja">参加リンクはメールでご案内</span></div></dd>
+      </div>
+    </dl>
+  </header>
+
+  <section id="program">
+    <div class="sh"><h2><span lang="ko">진행 순서</span></h2><span class="ja" lang="ja">進行</span></div>
+    <div class="prog">
+      <div class="row"><div class="time">19:00–19:10</div>
+        <div lang="ko"><b>여는 인사 · 자막 연결 확인</b><span class="d">참가자 소개, 통역 도구 동작 확인</span></div>
+        <div lang="ja"><b>開会あいさつ・字幕接続の確認</b><span class="d">参加者紹介、通訳ツールの動作確認</span></div></div>
+      <div class="row"><div class="time">19:10–19:30</div>
+        <div lang="ko"><b>Canva 활용 사례 발표</b><span class="d">한국·일본 커뮤니티에서 각 1개 사례 공유</span></div>
+        <div lang="ja"><b>Canva 活用事例の発表</b><span class="d">韓国・日本のコミュニティから各1事例を共有</span></div></div>
+      <div class="row"><div class="time">19:30–19:50</div>
+        <div lang="ko"><b>Canva에서 함께 만들기</b><span class="d">공유 디자인·화이트보드에서 같이 작업하며 대화</span></div>
+        <div lang="ja"><b>Canva で一緒に作る</b><span class="d">共有デザイン・ホワイトボードで共同作業しながら交流</span></div></div>
+      <div class="row"><div class="time">19:50–20:00</div>
+        <div lang="ko"><b>질의응답 · 마무리</b><span class="d">다음 교류 안내</span></div>
+        <div lang="ja"><b>質疑応答・閉会</b><span class="d">次回交流のご案内</span></div></div>
+    </div>
+  </section>
+
+  <section id="tools">
+    <div class="sh"><h2><span lang="ko">통역 도구</span></h2><span class="ja" lang="ja">通訳ツール</span>
+      <p><span lang="ko">둘 중 하나를 골라 쓰세요.</span> <span lang="ja">どちらか一つを選んでください。</span></p></div>
+
+    <div class="tools">
+      <article class="tool">
+        <div class="tool-h"><span class="chip">A</span><h3>이음 LIVE</h3></div>
+        <div class="desc">
+          <p lang="ko">자막봇이 회의에 들어와 한국어·일본어 자막을 원문과 번역으로 나란히 보여 줍니다.</p>
+          <p lang="ja">字幕ボットが会議に入り、韓国語・日本語の字幕を原文と翻訳で並べて表示します。</p>
+        </div>
+        <dl class="specs">
+          <div><dt>준비 / 準備</dt><dd>없음 · 모바일 가능 / なし · スマホ可</dd></div>
+          <div><dt>비용 / 費用</dt><dd>참가자 무료 / 参加者は無料</dd></div>
+          <div><dt>언어 / 言語</dt><dd>한국어 · 日本語 · English</dd></div>
+          <div><dt>회의 / 会議</dt><dd>Zoom · Google Meet · Teams</dd></div>
+        </dl>
+        <div class="pc">
+          <div class="pros"><h4><span lang="ko">장점</span> <span lang="ja">長所</span></h4><ul>
+            <li><span><span lang="ko">휴대폰·태블릿·PC 어디서나 링크만 열면 됨</span><span lang="ja">スマホ・タブレット・PCどこでもリンクを開くだけ</span></span></li>
+            <li><span><span lang="ko">가입·설치·API 키 필요 없음, 참가자 무료</span><span lang="ja">登録・インストール・APIキー不要、参加者は無料</span></span></li>
+            <li><span><span lang="ko">원문+번역을 한 줄에, 발화자 이름 표시</span><span lang="ja">原文＋翻訳を同じ行に、話者名も表示</span></span></li>
+            <li><span><span lang="ko">Zoom·Meet·Teams 앱 그대로 사용 가능</span><span lang="ja">Zoom・Meet・Teams のアプリをそのまま使える</span></span></li>
+          </ul></div>
+          <div class="cons"><h4><span lang="ko">단점</span> <span lang="ja">短所</span></h4><ul>
+            <li><span><span lang="ko">회의 화면과 자막 화면을 따로 봐야 함</span><span lang="ja">会議画面と字幕画面を別々に見る必要がある</span></span></li>
+            <li><span><span lang="ko">휴대폰으로 자막을 띄우거나, PC에서 창 두 개를 나란히 놓는 걸 추천</span><span lang="ja">スマホで字幕を開くか、PCでウィンドウを2つ並べるのがおすすめ</span></span></li>
+          </ul></div>
+        </div>
+        <div class="foot"><a class="more" href="#guide-a"><span lang="ko">사용법 보기</span> <span lang="ja">使い方を見る</span> →</a></div>
+      </article>
+
+      <article class="tool">
+        <div class="tool-h"><span class="chip">B</span><h3>Interpretab</h3></div>
+        <div class="desc">
+          <p lang="ko">브라우저 탭 소리와 내 마이크를 Gemini로 실시간 통역해 음성과 자막으로 들려줍니다. 내 목소리를 상대 언어로 보낼 수도 있습니다.</p>
+          <p lang="ja">タブ音声とマイクを Gemini でリアルタイム通訳し、音声と字幕で届けます。自分の声を相手の言語で送ることもできます。</p>
+        </div>
+        <dl class="specs">
+          <div><dt>준비 / 準備</dt><dd>PC Chrome 116+ · Gemini API 키 / キー</dd></div>
+          <div><dt>비용 / 費用</dt><dd>무료 키로 체험 · 유료 약 $2.2/시간<br>無料キーで試用 · 有料 約$2.2/時間</dd></div>
+          <div><dt>언어 / 言語</dt><dd>78개 언어 / 78言語</dd></div>
+          <div><dt>회의 / 会議</dt><dd>Google Meet 권장 / 推奨</dd></div>
+        </dl>
+        <div class="pc">
+          <div class="pros"><h4><span lang="ko">장점</span> <span lang="ja">長所</span></h4><ul>
+            <li><span><span lang="ko">통역을 음성으로 들려줌 (자막도 함께)</span><span lang="ja">通訳を音声で聞ける（字幕も表示）</span></span></li>
+            <li><span><span lang="ko">Meet에서 내 목소리를 상대 언어로 보낼 수 있음</span><span lang="ja">Meet で自分の声を相手の言語で送れる</span></span></li>
+            <li><span><span lang="ko">78개 언어, 영상·슬라이드 등 어떤 탭이든 통역</span><span lang="ja">78言語、動画・スライドなどどのタブでも通訳</span></span></li>
+            <li><span><span lang="ko">중간 서버 없이 내 키로 Gemini에 직접 연결</span><span lang="ja">中継サーバーなし、自分のキーで Gemini に直接接続</span></span></li>
+          </ul></div>
+          <div class="cons"><h4><span lang="ko">단점</span> <span lang="ja">短所</span></h4><ul>
+            <li><span><span lang="ko">PC Chrome 전용. 휴대폰·태블릿에서는 사용 불가</span><span lang="ja">PC版 Chrome 専用。スマホ・タブレットでは使えない</span></span></li>
+            <li><span><span lang="ko">Zoom·Teams 데스크톱 앱 소리는 못 잡음 (브라우저로 입장해야 함)</span><span lang="ja">Zoom・Teams のデスクトップアプリ音声は不可（ブラウザから参加が必要）</span></span></li>
+            <li><span><span lang="ko">참가자마다 Gemini API 키 직접 설정 (약 5분)</span><span lang="ja">参加者ごとに Gemini API キーの設定が必要（約5分）</span></span></li>
+            <li><span><span lang="ko">무료 키는 데이터 활용 가능성, 유료는 약 $2.2/시간</span><span lang="ja">無料キーはデータ利用の可能性、有料は約$2.2/時間</span></span></li>
+            <li><span><span lang="ko">헤드폰 필수, 한 번에 한 탭만</span><span lang="ja">ヘッドホン必須、一度に1タブのみ</span></span></li>
+          </ul></div>
+        </div>
+        <div class="foot">
+          <a class="install" href="https://chromewebstore.google.com/detail/johnocemcoemdhiogfgmphjmlghgdnbm" target="_blank" rel="noopener"><span class="ico" aria-hidden="true">↓</span><span class="txt"><b><span lang="ko">Chrome에 확장 프로그램 설치</span><span lang="ja">Chrome に拡張機能を追加</span></b><small>chromewebstore.google.com · Interpretab</small></span><span aria-hidden="true">↗</span></a>
+          <a class="more" href="#guide-b"><span lang="ko">사용법 보기</span> <span lang="ja">使い方を見る</span> →</a>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section id="guides">
+    <div class="sh"><h2><span lang="ko">사용법</span></h2><span class="ja" lang="ja">使い方</span></div>
+
+    <div class="guide" id="guide-a">
+      <div class="guide-h"><span class="chip">A</span><h3>이음 LIVE</h3></div>
+      <ol class="steps">
+        <li><span class="ko" lang="ko"><b>자막 링크 받기</b><p>당일 운영진이 자막 링크(또는 QR·자막 코드)를 보내 드립니다.</p></span><span class="ja" lang="ja"><b>字幕リンクを受け取る</b><p>当日、運営から字幕リンク（またはQR・字幕コード）をお送りします。</p></span></li>
+        <li><span class="ko" lang="ko"><b>링크 열기</b><p>휴대폰이나 다른 창에서 엽니다. 가입·설치·마이크 권한이 필요 없습니다.</p></span><span class="ja" lang="ja"><b>リンクを開く</b><p>スマホや別ウィンドウで開きます。登録・インストール・マイク許可は不要です。</p></span></li>
+        <li><span class="ko" lang="ko"><b>언어 선택</b><p>한국어 또는 일본어를 고르면 원문과 번역이 한 줄에 나옵니다. 글자 크기·고대비도 바꿀 수 있습니다.</p></span><span class="ja" lang="ja"><b>言語を選ぶ</b><p>韓国語または日本語を選ぶと、原文と翻訳が同じ行に表示されます。文字サイズ・ハイコントラストも変更できます。</p></span></li>
+      </ol>
+    </div>
+
+    <div class="guide" id="guide-b">
+      <div class="guide-h"><span class="chip">B</span><h3>Interpretab</h3></div>
+      <p class="guide-note"><span lang="ko">처음 설정은 약 5분입니다. 연수 전날까지 해 두세요.</span><span lang="ja">初回設定は約5分です。研修の前日までに済ませてください。</span></p>
+      <a class="install" style="max-width:520px" href="https://chromewebstore.google.com/detail/johnocemcoemdhiogfgmphjmlghgdnbm" target="_blank" rel="noopener"><span class="ico" aria-hidden="true">↓</span><span class="txt"><b><span lang="ko">Chrome에 확장 프로그램 설치</span><span lang="ja">Chrome に拡張機能を追加</span></b><small>chromewebstore.google.com · Interpretab</small></span><span aria-hidden="true">↗</span></a>
+      <ol class="steps">
+        <li><span class="ko" lang="ko"><b>확장 프로그램 설치</b><p>위 버튼으로 <span class="kbd">Interpretab</span>을 추가하고 툴바에 고정합니다. PC Chrome에서만 됩니다.</p></span><span class="ja" lang="ja"><b>拡張機能をインストール</b><p>上のボタンから <span class="kbd">Interpretab</span> を追加し、ツールバーにピン留めします。PC版 Chrome のみ対応。</p></span></li>
+        <li><span class="ko" lang="ko"><b>Gemini API 키 만들기</b><p><a href="https://aistudio.google.com/apikey" target="_blank" rel="noopener">Google AI Studio</a>에서 무료 키를 만듭니다. 처음이면 Google Cloud 프로젝트도 함께 생깁니다.</p></span><span class="ja" lang="ja"><b>Gemini API キーを作成</b><p><a href="https://aistudio.google.com/apikey" target="_blank" rel="noopener">Google AI Studio</a> で無料キーを作成します。初回は Google Cloud プロジェクトも作成されます。</p></span></li>
+        <li><span class="ko" lang="ko"><b>키 붙여넣기</b><p>확장 <span class="kbd">옵션</span>에 키를 넣고 Free/Paid를 고릅니다. 키는 내 컴퓨터에만 저장됩니다.</p></span><span class="ja" lang="ja"><b>キーを貼り付け</b><p>拡張機能の <span class="kbd">オプション</span> にキーを入れ、Free / Paid を選択。キーは自分のPCにのみ保存されます。</p></span></li>
+        <li><span class="ko" lang="ko"><b>회의 탭에서 시작</b><p>회의 탭에서 아이콘 클릭(권한 허용) → 사이드 패널에서 언어 선택 → <span class="kbd">Start</span></p></span><span class="ja" lang="ja"><b>会議タブで開始</b><p>会議タブでアイコンをクリック（権限を許可）→ サイドパネルで言語選択 → <span class="kbd">Start</span></p></span></li>
+        <li><span class="ko" lang="ko"><b>모드 고르기</b><p>듣기: 탭 오디오 → 한국어. 화면 아래 자막 3줄.<br>말하기: 마이크 → 동시통역 또는 양방향 대화.</p></span><span class="ja" lang="ja"><b>モードを選ぶ</b><p>聞く：タブ音声 → 日本語。画面下に字幕3行。<br>話す：マイク → 同時通訳または双方向会話。</p></span></li>
+        <li><span class="ko" lang="ko"><b>Meet에서 내 목소리 보내기 (선택)</b><p>헤드폰 착용 → 탭 오디오는 상대 언어, 마이크는 내 언어 → Meet 마이크를 <span class="kbd">Interpretab (translated)</span>로 선택</p></span><span class="ja" lang="ja"><b>Meet で自分の声を送る（任意）</b><p>ヘッドホン着用 → タブ音声は相手の言語、マイクは自分の言語 → Meet のマイクを <span class="kbd">Interpretab (translated)</span> に</p></span></li>
+      </ol>
+
+      <div class="note-box">
+        <div lang="ko"><b>알아 두세요</b><ul>
+          <li>기계 번역이라 이름·전문용어를 잘못 들을 수 있습니다.</li>
+          <li>마이크를 쓸 땐 헤드폰이 필요합니다. 스피커면 소리가 되돌아갑니다.</li>
+          <li>한 번에 한 탭만 통역됩니다. 탭 오디오와 마이크를 함께 쓰면 비용이 2배입니다.</li>
+          <li>무료 키는 Google이 데이터를 제품 개선에 쓸 수 있습니다. 키는 공유하지 마세요.</li>
+          <li>Zoom·Teams로 내 목소리를 보내려면 BlackHole·VB-Cable 같은 가상 오디오 장치가 필요합니다.</li>
+        </ul></div>
+        <div lang="ja"><b>ご注意</b><ul>
+          <li>機械翻訳のため、名前や専門用語を聞き間違えることがあります。</li>
+          <li>マイク使用時はヘッドホンが必要です。スピーカーだと音が回り込みます。</li>
+          <li>通訳は一度に1タブのみ。タブ音声とマイクを同時に使うと費用は2倍です。</li>
+          <li>無料キーでは Google がデータを製品改善に使う場合があります。キーは共有しないでください。</li>
+          <li>Zoom・Teams で自分の声を送るには BlackHole・VB-Cable などの仮想オーディオが必要です。</li>
+        </ul></div>
+      </div>
+      <a class="ext" href="https://kazunori279.github.io/interpretab/" target="_blank" rel="noopener"><span lang="ko">Interpretab 공식 가이드</span> <span lang="ja">公式ガイド</span> ↗</a>
+    </div>
+  </section>
+
+  <section id="apply">
+    <div class="sh"><h2><span lang="ko">신청</span></h2><span class="ja" lang="ja">お申し込み</span></div>
+    <div class="apply-box">
+      <div>
+        <b><span lang="ko">모든 안내는 이메일로 보내 드립니다</span><span lang="ja">ご案内はすべてメールでお送りします</span></b>
+        <p lang="ko">정확한 날짜와 접속 링크는 신청하신 이메일로 안내합니다. 메일함(스팸함 포함)을 확인해 주세요.</p>
+        <p lang="ja">正式な日程と参加リンクは、ご登録のメールアドレスにお送りします。受信箱（迷惑メールフォルダを含む）をご確認ください。</p>
+      </div>
+      <a class="btn solid" href="https://canva-training-apply.vercel.app/exchange#apply"><span lang="ko">신청서 작성하기</span><span lang="ja"> 申込フォームへ</span> →</a>
+    </div>
+  </section>
+
+  <section id="checklist">
+    <div class="sh"><h2><span lang="ko">참여 전 확인</span></h2><span class="ja" lang="ja">参加前チェック</span></div>
+    <div class="check">
+      <label for="c1"><input type="checkbox" id="c1"><span class="t"><span lang="ko">통역 도구 선택 (A 또는 B)</span><span lang="ja">通訳ツールを選ぶ（A または B）</span></span></label>
+      <label for="c2"><input type="checkbox" id="c2"><span class="t"><span lang="ko">B를 쓴다면 API 키 설정 완료</span><span lang="ja">B の場合、API キー設定済み</span></span></label>
+      <label for="c3"><input type="checkbox" id="c3"><span class="t"><span lang="ko">헤드폰·이어폰 준비</span><span lang="ja">ヘッドホン・イヤホンを用意</span></span></label>
+      <label for="c4"><input type="checkbox" id="c4"><span class="t"><span lang="ko">Chrome 최신 버전 확인</span><span lang="ja">Chrome を最新版に</span></span></label>
+      <label for="c5"><input type="checkbox" id="c5"><span class="t"><span lang="ko">Canva 로그인, 30초 자기소개 준비</span><span lang="ja">Canva にログイン、30秒の自己紹介を準備</span></span></label>
+      <label for="c6"><input type="checkbox" id="c6"><span class="t"><span lang="ko">18:50까지 입장해 소리·자막 확인</span><span lang="ja">18:50までに入室し音声・字幕を確認</span></span></label>
+    </div>
+    <div class="count" id="pct">0 / 6</div>
+  </section>
+
+  <footer>
+    <p lang="ko">정확한 날짜와 접속 안내는 신청하신 이메일로 보내 드립니다.</p>
+    <p lang="ja">正式な日程と参加案内は、ご登録のメールアドレスにお送りします。</p>
+  </footer>
+</main>
+
+<script>
+(function(){
+  var btns=document.querySelectorAll('.seg button');
+  function set(mode){
+    document.body.classList.remove('only-ko','only-ja');
+    if(mode==='ko')document.body.classList.add('only-ko');
+    if(mode==='ja')document.body.classList.add('only-ja');
+    btns.forEach(function(b){b.setAttribute('aria-pressed',b.dataset.mode===mode?'true':'false')});
+    try{localStorage.setItem('kj-lang',mode)}catch(e){}
+  }
+  btns.forEach(function(b){b.addEventListener('click',function(){set(b.dataset.mode)})});
+  try{var m=localStorage.getItem('kj-lang');if(m)set(m)}catch(e){}
+  var boxes=document.querySelectorAll('.check input');
+  function upd(){var n=0;boxes.forEach(function(i){if(i.checked)n++});document.getElementById('pct').textContent=n+' / '+boxes.length}
+  boxes.forEach(function(i){
+    try{i.checked=localStorage.getItem('kj-'+i.id)==='1'}catch(e){}
+    i.addEventListener('change',function(){try{localStorage.setItem('kj-'+i.id,i.checked?'1':'0')}catch(e){}upd()});
+  });
+  upd();
+})();
+</script>
+
+</body>
+</html>
