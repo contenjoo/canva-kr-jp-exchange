@@ -198,6 +198,7 @@ body.only-ja .community-text>p[lang="ja"]{color:var(--ink)}
 .features{list-style:none;margin:12px 0 4px;padding:0;display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
 .features li{background:var(--surface);border-radius:12px;padding:16px;display:grid;gap:4px;align-content:start;min-width:0}
 .features b{font-size:15px}
+body:not(.only-ko):not(.only-ja) .features b span[lang="ja"]::before{content:" / ";opacity:.6;font-weight:400}
 .features li>span{font-size:13.5px;color:var(--ink-2);line-height:1.55}
 .community-text>p.community-note{margin-top:4px;font-size:13px;color:var(--ink-2)}
 .community-actions{display:grid;gap:10px}
@@ -420,9 +421,9 @@ footer p{margin:0}
         <p lang="ko">연수 당일뿐 아니라 그 뒤에도 선생님들이 계속 교류할 수 있도록 한·일 선생님을 위한 교류 공간을 만들었습니다.</p>
         <p lang="ja">研修当日だけでなく、その後も先生同士で交流を続けられるよう、日韓の先生向けの交流スペースを作りました。</p>
         <ul class="features">
-          <li><b><span lang="ko">한국어·일본어 자동 번역</span><span lang="ja"> 日本語・韓国語の自動翻訳</span></b><span lang="ko">각자의 언어로 일상과 수업 아이디어를 편하게 나눕니다.</span><span lang="ja">それぞれの言語で、日常のことや授業のアイデアを気軽に話せます。</span></li>
-          <li><b><span lang="ko">교류 수업 상대 학교 찾기</span><span lang="ja"> 交流授業の相手校探し</span></b><span lang="ko">학교끼리 교류 수업을 해 보고 싶은 선생님은 상대 학교를 찾아 연결할 수 있습니다.</span><span lang="ja">学校同士で交流授業をしてみたい先生は、相手校を探してつながれます。</span></li>
-          <li><b><span lang="ko">바로 참여</span><span lang="ja"> すぐに参加</span></b><span lang="ko">로그인한 뒤 학교 정보와 자동 번역 동의를 확인하면 바로 참여할 수 있습니다.</span><span lang="ja">ログインして学校情報と自動翻訳への同意を確認すれば、すぐに参加できます。</span></li>
+          <li><b><span lang="ko">한국어·일본어 자동 번역</span><span lang="ja">日本語・韓国語の自動翻訳</span></b><span lang="ko">각자의 언어로 일상과 수업 아이디어를 편하게 나눕니다.</span><span lang="ja">それぞれの言語で、日常のことや授業のアイデアを気軽に話せます。</span></li>
+          <li><b><span lang="ko">교류 수업 상대 학교 찾기</span><span lang="ja">交流授業の相手校探し</span></b><span lang="ko">학교끼리 교류 수업을 해 보고 싶은 선생님은 상대 학교를 찾아 연결할 수 있습니다.</span><span lang="ja">学校同士で交流授業をしてみたい先生は、相手校を探してつながれます。</span></li>
+          <li><b><span lang="ko">바로 참여</span><span lang="ja">すぐに参加</span></b><span lang="ko">로그인한 뒤 학교 정보와 자동 번역 동의를 확인하면 바로 참여할 수 있습니다.</span><span lang="ja">ログインして学校情報と自動翻訳への同意を確認すれば、すぐに参加できます。</span></li>
         </ul>
         <p class="community-note" lang="ko">Canva 공식 커뮤니티가 아니라 LearnToday(오늘배움)가 직접 운영하는 공간입니다.</p>
         <p class="community-note" lang="ja">Canvaの公式コミュニティではなく、LearnTodayが独自に運営する場です。</p>
